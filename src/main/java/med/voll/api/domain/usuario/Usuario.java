@@ -24,6 +24,10 @@ public class Usuario implements UserDetails{
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
+    public Usuario(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
+    }
 
     public String getPassword() {
         return senha;
